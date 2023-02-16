@@ -13,4 +13,8 @@
 
 ## Deployment
 
+```
+func azure functionapp publish funcpsusscdev
+```
+
 ## Links
