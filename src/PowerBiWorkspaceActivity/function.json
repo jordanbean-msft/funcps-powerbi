@@ -1,0 +1,9 @@
+{
+  "bindings": [
+    {
+      "name": "workspaceName",
+      "type": "activityTrigger",
+      "direction": "in"
+    }
+  ]
+}
