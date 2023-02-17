@@ -1,6 +1,7 @@
-# template-repository
+# funcps-powerbi
 
 ![architecture](./.img/architecture.png)
+![fan-out](./.img/fan-out.png)
 
 The most basic Durable Functions app contains three functions:
 
