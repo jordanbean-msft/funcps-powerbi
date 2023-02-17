@@ -1,6 +1,6 @@
 param($context)
 
-$workspaceNames = @('Power BI Workspace 1')#, 'Power BI Workspace 2', 'Power BI Workspace 3')
+$workspaceNames = @('Power BI Workspace 1', 'Power BI Workspace 2', 'Power BI Workspace 3')
 
 $parallelTasks = foreach ($workspaceName in $workspaceNames) {
   Invoke-DurableActivity -FunctionName 'PowerBiWorkspaceActivity' `

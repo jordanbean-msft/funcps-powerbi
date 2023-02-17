@@ -1,6 +1,5 @@
 # funcps-powerbi
 
-![architecture](./.img/architecture.png)
 ![fan-out](./.img/fan-out.png)
 
 The most basic Durable Functions app contains three functions:
@@ -18,13 +17,19 @@ The most basic Durable Functions app contains three functions:
 - [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli)
 - Azure subscription & resource group
 - [Azure Function Core Tools](https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local)
-- [Azure Storage Emulator](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-emulator)
+- [Azurite Extension for VS Code](https://marketplace.visualstudio.com/items?itemName=Azurite.azurite)
+- [PowerShell Core](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-7.1)
+- [.NET](https://dotnet.microsoft.com/en-us/download)
 
-## Deployment
+## Run Locally
 
-```
-func azure functionapp publish funcpsusscdev
-```
+Make sure the `Azurite` extension is running. Azure Functions must have Storage Account access to run locally.
+
+Click on the `Azurite Table Service` label at the bottom of VS Code. Do the same for `Azurite Queue Service` and `Azurite Blob Service`.
+
+![azurite](./.img/azurite.png)
+
+Run the Durable Functions app locally:
 
 ```
 func start
@@ -32,6 +37,12 @@ func start
 
 ```
 curl -X POST http://localhost:7071/api/orchestrators/PowerBiWorkspaceOrchestrator
+```
+
+## Deploy to Azure
+
+```
+func azure functionapp publish funcpsusscdev
 ```
 
 ## Links
